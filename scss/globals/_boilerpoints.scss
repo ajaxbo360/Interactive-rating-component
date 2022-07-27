@@ -1,0 +1,19 @@
+@use "variables" as v;
+
+
+*,*::before,*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    box-sizing: inherit;
+    font-family: v.$primary-font;
+    font-size: 15px;
+}
+
+a, a:active, a:visited {
+    text-decoration: none;
+}

@@ -1,0 +1,184 @@
+@use "globals/boilerpoints";
+@use "globals/styles" as s;
+@use "globals/variables" as v;
+@use "globals/breakpoints" as b;
+
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: v.$very-dark-blue;
+
+  @include s.flex(flex, column, center, center);
+  .rating {
+    border-radius: 18px;
+    // visibility: hidden;
+    width: 85%;
+
+    margin: 0 auto;
+    background-image: linear-gradient(v.$dark-blue, v.$very-dark-blue);
+    padding: 7%;
+    @include b.breakpoint(medium) {
+      max-width: 463px;
+      padding: 3%;
+    }
+    @include b.breakpoint-down(medium) {
+      max-width: 463px;
+      padding: 5%;
+    }
+
+    &__component {
+      @include s.flex(flex, column, space-between, flex-start);
+
+      &__icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: v.$very-light-grey;
+        @include s.flex(flex, row, center, center);
+        text-align: center;
+        padding-top: 5px;
+        margin-bottom: 10%;
+
+        a {
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      &__heading {
+        font-family: v.$primary-font;
+        font-size: 1.7rem;
+        color: v.$white;
+        margin-bottom: 8%;
+      }
+
+      &__body {
+        font-family: v.$primary-font;
+        font-size: 0.85rem;
+        line-height: 1.8;
+        color: v.$medium-grey;
+        margin-bottom: 12%;
+        width: 100%;
+      }
+
+      &__count {
+        @include s.flex(flex, row, space-between, stretch);
+        width: 100%;
+        margin-bottom: 12%;
+
+       
+
+        .stars {
+          cursor: pointer;
+          padding-top: 5px;
+          @include s.flex(flex, row, center, center);
+          width: 43px;
+          height: 43px;
+          border-radius: 50%;
+          background-color: v.$very-light-grey;
+          color: v.$medium-grey;
+          transition: all 0.4s ease-in-out;
+          &:nth-child(4){
+            background-color: v.$medium-grey;
+                color: v.$white;
+          }
+          &:hover {
+            background-color: v.$primary-orange;
+            color: v.$white;
+          }
+        }
+      }
+
+      &__btn {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: v.$white;
+        font-weight: 700;
+        background-color: v.$primary-orange;
+        border-radius: 2rem;
+        outline: none;
+        border: none;
+        letter-spacing: 0.2rem;
+        padding: 1rem 0;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+          background-color: v.$white;
+          color: v.$primary-orange;
+        }
+      }
+    }
+  }
+
+  .thank-you__component {
+    border-radius: 18px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    @include s.flex(flex, column, space-between, center);
+    width: 85%;
+    margin: 0 auto;
+    background-image: linear-gradient(v.$dark-blue, v.$very-dark-blue);
+    padding: 7%;
+    @include b.breakpoint(medium) {
+      max-width: 463px;
+      padding: 3%;
+    }
+
+    @include b.breakpoint-down(medium) {
+      max-width: 463px;
+      padding: 5%;
+    }
+    &__illustration {
+      margin-bottom: 8%;
+    }
+
+    .selected-stars {
+      padding: 0.4rem 0.9rem;
+      margin-bottom: 10%;
+
+      background-color: v.$very-light-grey;
+      border-radius: 2rem;
+      h2 {
+        font-size: 0.8rem;
+        color: v.$primary-orange;
+        font-weight: 400;
+        opacity: 0.7;
+      }
+    }
+
+    &__heading {
+      color: v.$white;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 8%;
+    }
+    &__body {
+      text-align: center;
+      color: v.$medium-grey;
+      width: 100%;
+      line-height: 1.8;
+      font-size: 0.86rem;
+      font-weight: 400;
+
+      margin-bottom: 13%;
+    }
+  }
+
+  .open-popup {
+   visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    top: 50%;
+  }
+  // .close-popup {
+  //   display: none;
+  //   transform: translate(-50%, -50%) scale(1);
+  //   top: 50%;
+  // }
+}

@@ -1,0 +1,10 @@
+@mixin flex($display, $direction, $js-c, $ai) {
+
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $js-c;
+    align-items: $ai;
+
+
+
+}

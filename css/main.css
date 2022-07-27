@@ -1,0 +1,195 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+}
+
+a, a:active, a:visited {
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: hsl(216deg, 12%, 8%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .rating {
+  border-radius: 18px;
+  width: 85%;
+  margin: 0 auto;
+  background-image: linear-gradient(hsl(213deg, 19%, 18%), hsl(216deg, 12%, 8%));
+  padding: 7%;
+}
+@media (min-width: 48em) {
+  main .rating {
+    max-width: 463px;
+    padding: 3%;
+  }
+}
+@media (max-width: 61.998em) {
+  main .rating {
+    max-width: 463px;
+    padding: 5%;
+  }
+}
+main .rating__component {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main .rating__component__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsla(217deg, 12%, 63%, 0.081);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5px;
+  margin-bottom: 10%;
+}
+main .rating__component__icon a {
+  padding: 0;
+  margin: 0;
+}
+main .rating__component__heading {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.7rem;
+  color: hsl(0deg, 0%, 100%);
+  margin-bottom: 8%;
+}
+main .rating__component__body {
+  font-family: "Overpass", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: hsl(216deg, 12%, 54%);
+  margin-bottom: 12%;
+  width: 100%;
+}
+main .rating__component__count {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  margin-bottom: 12%;
+}
+main .rating__component__count .stars {
+  cursor: pointer;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background-color: hsla(217deg, 12%, 63%, 0.081);
+  color: hsl(216deg, 12%, 54%);
+  transition: all 0.4s ease-in-out;
+}
+main .rating__component__count .stars:nth-child(4) {
+  background-color: hsl(216deg, 12%, 54%);
+  color: hsl(0deg, 0%, 100%);
+}
+main .rating__component__count .stars:hover {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+}
+main .rating__component__btn {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  background-color: hsl(25deg, 97%, 53%);
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  letter-spacing: 0.2rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+main .rating__component__btn:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+}
+main .thank-you__component {
+  border-radius: 18px;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%) scale(0.1);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+  background-image: linear-gradient(hsl(213deg, 19%, 18%), hsl(216deg, 12%, 8%));
+  padding: 7%;
+}
+@media (min-width: 48em) {
+  main .thank-you__component {
+    max-width: 463px;
+    padding: 3%;
+  }
+}
+@media (max-width: 61.998em) {
+  main .thank-you__component {
+    max-width: 463px;
+    padding: 5%;
+  }
+}
+main .thank-you__component__illustration {
+  margin-bottom: 8%;
+}
+main .thank-you__component .selected-stars {
+  padding: 0.4rem 0.9rem;
+  margin-bottom: 10%;
+  background-color: hsla(217deg, 12%, 63%, 0.081);
+  border-radius: 2rem;
+}
+main .thank-you__component .selected-stars h2 {
+  font-size: 0.8rem;
+  color: hsl(25deg, 97%, 53%);
+  font-weight: 400;
+  opacity: 0.7;
+}
+main .thank-you__component__heading {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 8%;
+}
+main .thank-you__component__body {
+  text-align: center;
+  color: hsl(216deg, 12%, 54%);
+  width: 100%;
+  line-height: 1.8;
+  font-size: 0.86rem;
+  font-weight: 400;
+  margin-bottom: 13%;
+}
+main .open-popup {
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  top: 50%;
+}/*# sourceMappingURL=main.css.map */
