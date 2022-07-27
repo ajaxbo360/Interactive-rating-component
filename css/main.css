@@ -158,6 +158,16 @@ main .thank-you__component {
     padding: 5%;
   }
 }
+main .thank-you__component__close__btn {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  top: 0;
+  right: 1.2rem;
+  color: hsl(25deg, 97%, 53%);
+  cursor: pointer;
+}
 main .thank-you__component__illustration {
   margin-bottom: 8%;
 }

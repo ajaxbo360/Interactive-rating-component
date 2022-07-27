@@ -135,6 +135,16 @@ main {
       max-width: 463px;
       padding: 5%;
     }
+    &__close__btn {
+      position: absolute;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      top: 0;
+      right: 1.2rem;
+      color: v.$primary-orange;
+      cursor: pointer;
+    }
     &__illustration {
       margin-bottom: 8%;
     }
